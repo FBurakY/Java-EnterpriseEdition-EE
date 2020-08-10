@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>ServletJSP2017Week01</display-name>
+
+
+<servlet>
+	<servlet-name>MyFirstServletName</servlet-name>
+	<servlet-class>_01.helloservlet.MyFirstServlet</servlet-class>
+	<!-- DIKKAT : servlet class kismini dogru yazalim packageName.className seklinde olacak
+	sonunda .java olmayaacak.
+	ctrl bastigimizda tiklayip ilgili sinifa gidebiliyor olmamiz lazim aksi durumda yanlis yazdik demektir.
+	 -->
+</servlet>
+
+
+<servlet-mapping>
+	
+	<!-- DIKKAT : hangi servlete karsilik mapping yapacaksak ilgili servlet name i dogru sekilde verelim. -->
+	<servlet-name>MyFirstServletName</servlet-name>
+	<url-pattern>/myfirstservleturl</url-pattern>
+	<url-pattern>/myurl2</url-pattern>
+	<!-- url pattern e /ile basla!!! -->
+</servlet-mapping>
+
+
+</web-app>
